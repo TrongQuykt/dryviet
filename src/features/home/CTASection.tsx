@@ -43,8 +43,13 @@ export function CTASection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-              <Button href="/contact" size="lg" className="w-full sm:w-auto bg-white text-brand-900 hover:bg-cream px-10 shadow-xl shadow-black/10">
-                Liên Hệ Đội Ngũ Kinh Doanh <ArrowRight size={20} className="ml-2" />
+              <Button
+                href="/contact"
+                size="lg"
+                className="w-full sm:w-auto bg-white text-brand-900 hover:bg-cream px-6 sm:px-10 text-sm sm:text-base shadow-xl shadow-black/10"
+              >
+                Liên Hệ Đội Ngũ Kinh Doanh
+                <ArrowRight size={18} className="ml-2 sm:w-5 sm:h-5" />
               </Button>
               <div className="flex items-center gap-3 text-sm text-brand-100 font-medium">
                 <span className="opacity-40">hoặc</span>

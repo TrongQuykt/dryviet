@@ -79,6 +79,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-padding-top: 5rem; /* Better alignment for fixed navbar */
   }
 
   body {
@@ -121,4 +122,9 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
+}
+.gpu-accelerate {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

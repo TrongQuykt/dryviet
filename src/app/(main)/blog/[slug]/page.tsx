@@ -133,10 +133,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           remarkPlugins={[remarkGfm]}
           components={{
             h2: ({ node, ...props }) => (
-              <h2 className="text-4xl md:text-3xl font-bold text-slate-950 mt-20 mb-8 tracking-tight border-l-8 border-brand-500 pl-8" {...props} />
+              <h2
+                className="text-2xl sm:text-3xl md:text-3xl font-bold text-slate-950 mt-16 md:mt-20 mb-6 md:mb-8 tracking-tight border-l-8 border-brand-500 pl-6 md:pl-8"
+                {...props}
+              />
             ),
+
             h3: ({ node, ...props }) => (
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mt-12 mb-6 tracking-tight bg-slate-50 p-4 rounded-2xl border-l-4 border-brand-400" {...props} />
+              <h3
+                className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mt-10 md:mt-12 mb-4 md:mb-6 tracking-tight bg-slate-50 p-3 md:p-4 rounded-2xl border-l-4 border-brand-400"
+                {...props}
+              />
             ),
             strong: ({ node, ...props }) => (
               <strong className="font-black text-slate-950 underline decoration-brand-200 decoration-4 underline-offset-4" {...props} />
@@ -174,8 +181,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container-xl max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-600 mb-6 block">Phân Tích Chiến Lược</span>
-              <h2 className="text-4xl md:text-5xl font-bold font-display text-slate-950 italic leading-none tracking-tight">Mở Rộng Kiến Thức Của Bạn.</h2>
+              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.4em] text-brand-600 mb-6 block">
+                Phân Tích Chiến Lược
+              </span>
+
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display text-slate-950 italic leading-none tracking-tight">
+                Mở Rộng Kiến Thức Của Bạn.
+              </h2>
             </div>
             <Button href="/blog" variant="outline" className="rounded-2xl border-slate-100 px-8 py-6 h-auto font-black uppercase tracking-[0.2em] text-[10px] hover:bg-brand-50">
               Xem Toàn Bộ Kho Lưu Trữ <ChevronRight size={14} className="ml-2" />

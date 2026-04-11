@@ -18,7 +18,7 @@ export default function ContactPage() {
         </div>
 
         <div className="container-xl relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-display tracking-tight text-brand-950">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display tracking-tight text-brand-950">
             Liên Hệ Với Chúng Tôi
           </h1>
           <p className="max-w-xxl mx-auto text-slate-500 text-base md:text-lg">
@@ -35,8 +35,13 @@ export default function ContactPage() {
             {/* Left: Contact Info */}
             <div className="lg:col-span-5 space-y-10">
               <div>
-                <span className="text-[10px] font-black tracking-widest uppercase text-brand-600 mb-2 block">Thông Tin Liên Hệ</span>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Kết nối trực tiếp</h2>
+                <span className="text-[9px] sm:text-[10px] font-black tracking-widest uppercase text-brand-600 mb-2 block text-center md:text-left">
+                  Thông Tin Liên Hệ
+                </span>
+
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center md:text-left">
+                  Kết nối trực tiếp
+                </h2>
                 <p className="text-slate-600 leading-relaxed">Nếu bạn có bất kỳ thắc mắc nào về dịch vụ OEM hoặc sản phẩm KOTHECHE, đừng ngần ngại liên hệ.</p>
               </div>
 

@@ -116,15 +116,18 @@ export default function KothechePage() {
       {/* Chapter 1: Strategic Brand Pillars - High Density 2-col on Mobile */}
       <section className="py-12 md:py-24 bg-white border-b border-slate-50">
         <div className="container-xl px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-8">
             {brandPillars.map((pillar, i) => (
-              <div key={i} className="group p-6 lg:p-12 rounded-[1.5rem] lg:rounded-[3.5rem] bg-[#FDFBF9] border border-brand-50 hover:bg-white hover:shadow-2xl transition-all duration-700">
+              <div
+                key={i}
+                className="flex flex-col w-[calc(50%-0.5rem)] lg:flex-1 min-w-[160px] md:min-w-[300px] group p-6 lg:p-12 rounded-[1.5rem] lg:rounded-[3.5rem] bg-[#FDFBF9] border border-brand-50 hover:bg-white hover:shadow-2xl transition-all duration-700"
+              >
                 <div className="w-10 h-10 md:w-16 md:h-16 bg-white rounded-xl flex items-center justify-center mb-4 lg:mb-10 shadow-sm border border-slate-100 mx-auto">
                   {pillar.icon}
                 </div>
-                <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-300 mb-1 text-center">{pillar.subtitle}</p>
-                <h3 className="text-sm md:text-2xl text-slate-950 mb-3 md:mb-6 font-bold italic text-center">{pillar.title}</h3>
-                <p className="text-slate-500 leading-relaxed text-[10px] md:text-sm opacity-80 text-center">{pillar.desc}</p>
+                <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-300 mb-1 text-center font-display">{pillar.subtitle}</p>
+                <h3 className="text-sm md:text-2xl text-slate-950 mb-3 md:mb-6 font-bold italic text-center leading-tight">{pillar.title}</h3>
+                <p className="text-slate-500 leading-relaxed text-[9px] md:text-sm opacity-80 text-center font-medium">{pillar.desc}</p>
               </div>
             ))}
           </div>

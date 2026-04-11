@@ -23,16 +23,13 @@ export function LazySection({ children, height = '300px', offset = '400px' }: La
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Add a small delay for a smoother feeling on fast scroll
-          setTimeout(() => {
-            setHasEnteredView(true)
-          }, 100)
+          setHasEnteredView(true)
           observer.disconnect()
         }
       },
       {
-        rootMargin: `0px 0px 200px 0px`, // Load sooner on mobile
-        threshold: 0.1
+        rootMargin: `0px 0px 800px 0px`, // Pre-load way sooner for smoothness
+        threshold: 0.01 // Trigger as soon as a single pixel or near-margin is reached
       }
     )
 
@@ -50,7 +47,7 @@ export function LazySection({ children, height = '300px', offset = '400px' }: La
     <div 
       ref={containerRef} 
       style={{ 
-        minHeight: hasEnteredView ? 'auto' : height,
+        minHeight: height, // Always keep min-height to prevent layout collapse during load
       }}
     >
       {hasEnteredView ? children : (

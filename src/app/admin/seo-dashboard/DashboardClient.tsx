@@ -10,7 +10,7 @@ import {
   LayoutDashboard, Bug, Search as SearchIcon, ChevronRight, Users, 
   RefreshCw, CheckCircle2, AlertCircle, Trash2, Info, BarChart4, ExternalLink,
   Zap, Globe, Activity, MousePointer2, Clock, ShieldCheck, Layers, Gauge, Cpu, Target,
-  Menu, X
+  Menu, X, Mail, Phone
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
@@ -269,26 +269,73 @@ export function DashboardClient() {
 
             {activeTab === 'leads' && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                <div className="overflow-x-auto pb-4">
-                  <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl font-bold text-white">Leads Pipeline</h2>
-                  </div>
-                  <div className="grid grid-cols-1 gap-4">
-                    {leads.map((lead) => (
-                      <div key={lead.id} className="bg-slate-900/50 p-6 rounded-xl border border-slate-800">
-                         <div className="flex justify-between items-center gap-4">
-                            <div className="flex items-center gap-4">
-                               <div className="w-10 h-10 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-400 font-black">{lead.fullName.charAt(0)}</div>
-                               <div>
-                                  <p className="text-sm font-bold text-white">{lead.fullName}</p>
-                                  <p className="text-[10px] text-slate-500 font-mono tracking-tighter">{lead.email}</p>
-                               </div>
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-xl font-bold text-white font-display italic">Leads Pipeline</h2>
+                  <Badge className="bg-indigo-500/10 text-indigo-400 border-indigo-500/20">{leads.length} Contacts</Badge>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-4">
+                  {leads.map((lead) => (
+                    <div key={lead.id} className="bg-slate-900/40 p-5 rounded-2xl border border-slate-800/50 hover:border-slate-700 transition-all">
+                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                        <div className="flex-1 space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 font-bold text-xs">
+                              {lead.fullName.charAt(0)}
                             </div>
-                            <Badge className="bg-slate-800 border-slate-700 text-[10px]">{lead.interest}</Badge>
-                         </div>
+                            <div>
+                              <h4 className="text-sm font-bold text-white">{lead.fullName}</h4>
+                              <p className="text-[10px] text-slate-500">{new Date(lead.createdAt).toLocaleString('vi-VN')}</p>
+                            </div>
+                            <Badge className="bg-slate-800 border-slate-700 text-[9px] uppercase tracking-wider">{lead.interest}</Badge>
+                          </div>
+                          
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-11">
+                            <div className="flex items-center gap-2 text-[11px] text-slate-400">
+                              <Mail size={12} className="text-indigo-500" />
+                              {lead.email}
+                            </div>
+                            <div className="flex items-center gap-2 text-[11px] text-slate-400">
+                              <Phone size={12} className="text-emerald-500" />
+                              <span className="font-mono">{lead.phone}</span>
+                            </div>
+                          </div>
+
+                          {lead.message && (
+                            <div className="mt-4 pl-11">
+                              <p className="text-[10px] uppercase font-black text-slate-600 tracking-widest mb-1 italic">Message Content:</p>
+                              <div className="bg-slate-800/30 p-4 rounded-xl border border-slate-700/30 text-xs text-slate-300 leading-relaxed italic">
+                                " {lead.message} "
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                        
+                        <div className="flex md:flex-col gap-2 pt-2 md:pt-0">
+                           <a 
+                             href={`mailto:${lead.email}`}
+                             className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-all"
+                             title="Reply via Email"
+                           >
+                             <Mail size={16} />
+                           </a>
+                           <a 
+                             href={`tel:${lead.phone}`}
+                             className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-all"
+                             title="Call Lead"
+                           >
+                             <Phone size={16} />
+                           </a>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
+                  {leads.length === 0 && (
+                    <div className="py-20 text-center border-2 border-dashed border-slate-800 rounded-3xl">
+                      <Users className="mx-auto text-slate-700 mb-4" size={40} />
+                      <p className="text-slate-500 text-sm font-medium">No strategic leads detected in the pipeline.</p>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )}

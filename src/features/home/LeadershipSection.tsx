@@ -30,7 +30,9 @@ export function LeadershipSection() {
           <div className="mt-12 flex flex-col items-center">
             <div className="w-8 h-px bg-brand-200 mb-6" />
             <div className="flex items-center gap-3">
-              <span className="text-sm font-black text-gray-900 tracking-[0.2em] uppercase">{author}</span>
+              <span className="text-xs sm:text-sm font-black text-gray-900 tracking-[0.2em] uppercase">
+                {author}
+              </span>
               <span className="w-1 h-1 rounded-full bg-brand-300" />
               <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">{role}</span>
             </div>

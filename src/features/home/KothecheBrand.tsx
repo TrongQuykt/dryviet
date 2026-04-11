@@ -37,7 +37,7 @@ export function KothecheBrand() {
           <div className="w-full lg:w-1/2">
             <h2
               style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
-              className="text-3xl md:text-4xl font-extrabold text-white mb-10 text-center"
+              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-10 text-center"
             >
               THƯƠNG HIỆU UY TÍN, CHẤT LƯỢNG QUỐC TẾ
             </h2>

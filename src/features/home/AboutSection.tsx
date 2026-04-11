@@ -67,8 +67,10 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-brand-600 font-bold tracking-wider uppercase text-sm block mb-4 text-center">Câu Chuyện Của Viet Nam Cuong Thinh</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight text-center">
+            <span className="text-brand-600 font-bold tracking-wider uppercase text-xs sm:text-sm block mb-4 text-center">
+              Câu Chuyện Của Việt Nam Cường Thịnh
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight text-center">
               Nâng tầm chất lượng <br />
               <span className="text-brand-600">Nông Sản Việt.</span>
             </h2>

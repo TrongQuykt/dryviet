@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { ProcessSection } from '@/features/home/ProcessSection'
 import { CertificationsSection } from '@/features/home/CertificationsSection'
 import { Button } from '@/components/ui/Button'
@@ -75,9 +76,9 @@ export default function ServicesPage() {
             </span>
             Gia Công OEM Toàn Cầu
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
             Cơ Sở Hạ Tầng
-            <span className="block mt-1 text-brand-600 font-italic">
+            <span className="block mt-1 text-brand-600 font-italic text-xl sm:text-3xl md:text-5xl lg:text-7xl">
               Công Nghiệp Sấy Thăng Hoa
             </span>
           </h1>
@@ -90,6 +91,77 @@ export default function ServicesPage() {
             </Button>
             <div className="text-[10px] font-bold text-slate-400 flex items-center gap-2">
               <CheckCircle2 size={14} className="text-brand-500" /> Nhà Máy Tuân Thủ FSVP
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New QC Journey Section - Strategic Positioning */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div className="container-xl px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="flex justify-center md:block">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-800 rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-widest mb-6">
+                  Quy trình & Trách nhiệm
+                </div>
+              </div>
+
+              <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-slate-900 mb-8 font-display italic leading-tight tracking-tight text-center md:text-left">
+                Hành trình phía sau <br /> Mỗi lô sản phẩm.
+              </h2>
+
+              <div className="space-y-6 text-slate-600 text-sm md:text-lg leading-relaxed font-medium">
+                <p>
+                  Có một điều mà người tiêu dùng thường không nhìn thấy khi cầm trên tay một gói trái cây sấy thăng hoa:
+                  Đó là <span className="text-brand-700 font-bold decoration-brand-200 decoration-4">hành trình kiểm soát chất lượng</span> phía sau mỗi lô sản phẩm.
+                </p>
+                <p>
+                  Trái cây được chọn lọc theo mùa vụ, truy xuất rõ ràng, kiểm tra cảm quan và tiêu chuẩn đầu vào trước khi bước vào sản xuất.
+                  Nhưng đó mới chỉ là bước đầu.
+                </p>
+
+                <div className="py-8 border-y border-slate-100 my-8 space-y-5">
+                  <p className="font-bold text-slate-900 mb-2">Trong suốt quá trình gia công, mỗi lô sản phẩm đều trải qua kiểm tra QC nghiêm ngặt:</p>
+                  {[
+                    "Quy trình đóng gói kho bảo quản đảm bảo độ ẩm, độ ổn định và thời hạn sử dụng",
+                    "Dư lượng thuốc trừ sâu theo quy định của từng thị trường",
+                    "Vi sinh để đảm bảo sản phẩm an toàn cho người tiêu dùng cuối"
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 items-start group">
+                      <div className="mt-1 w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 font-black text-xs group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">+</div>
+                      <p className="text-sm md:text-base text-slate-700">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="italic text-slate-500 font-display">
+                  Uy tín không nằm ở bao bì hay câu chuyện, mà ở những con số phía sau. Vì vậy, từ nguồn trái cây đến khâu QC cuối cùng,
+                  mọi thứ đều được làm kỹ, rõ ràng, để mỗi lô trái cây sấy thăng hoa sẵn sàng bước ra thị trường quốc tế.
+                </p>
+
+                <div className="mt-12 p-8 md:p-12 bg-brand-950 rounded-[2.5rem] text-white shadow-2xl shadow-brand-950/20 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+                  <p className="relative z-10 text-sm md:text-xl mb-8 leading-relaxed font-medium opacity-90">
+                    Nếu bạn đang tìm một đối tác gia công trái cây sấy thăng hoa làm việc dựa trên dữ liệu, tiêu chuẩn và trách nhiệm dài hạn,
+                    chúng tôi sẵn sàng chia sẻ chi tiết hơn về quy trình, tiêu chuẩn QC và giải pháp phù hợp cho từng thị trường.
+                  </p>
+                  <Button href="/contact" size="huge" className="relative z-10 w-full sm:w-auto bg-white text-brand-950 hover:bg-brand-50 font-black uppercase text-[10px] tracking-widest px-10 shadow-xl">
+                    Kết nối với chuyên gia
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="relative aspect-video lg:aspect-[4/3] rounded-2xl md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100">
+                <Image
+                  src="/images/qc/qc.jpg"
+                  alt="Quy trình kiểm soát chất lượng tại DryViet"
+                  fill
+                  className="object-contain bg-white"
+                />
+              </div>
             </div>
           </div>
         </div>

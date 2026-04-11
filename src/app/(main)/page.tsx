@@ -33,59 +33,57 @@ export default function HomePage() {
       <CompanyLine />
       <BrandLine />
       
-      <LazySection height="600px">
+      <LazySection height="650px">
         <BannerMarquee />
       </LazySection>
 
-      <LazySection height="200px">
-        <FruitLine />
-      </LazySection>
+      <FruitLine />
 
-      <LazySection height="600px">
+      <LazySection height="800px">
         <AboutSection />
       </LazySection>
 
-      <LazySection height="400px">
+      <LazySection height="450px">
         <LeadershipSection />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection height="950px">
         <ServicesOverview />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection height="900px">
         <ProcessSection />
       </LazySection>
 
-      <LazySection height="600px">
+      <LazySection height="1000px">
         <FactorySection />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection height="800px">
         <KothecheBrand />
       </LazySection>
 
-      <LazySection height="600px">
+      <LazySection height="1100px">
         <ProductsTeaser />
       </LazySection>
 
-      <LazySection height="400px">
+      <LazySection height="450px">
         <CertificationsSection />
       </LazySection>
 
-      <LazySection height="400px">
+      <LazySection height="500px">
         <ContractsSection />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection height="700px">
         <BlogTeaser />
       </LazySection>
 
-      <LazySection height="400px">
+      <LazySection height="600px">
         <TestimonialsSection />
       </LazySection>
 
-      <LazySection height="400px">
+      <LazySection height="500px">
         <CTASection />
       </LazySection>
     </>

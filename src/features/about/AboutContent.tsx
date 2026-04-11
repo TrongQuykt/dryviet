@@ -61,10 +61,12 @@ export function AboutContent() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mb-10 text-brand-950 leading-[1.1] font-display tracking-tight"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mb-10 text-brand-950 leading-[1.1] font-display tracking-tight"
             >
               Công Nghệ Sấy Thăng Hoa <br />
-              <span className="text-brand-600 mt-2 inline-block">Giữ Trọn Tinh Chất.</span>
+              <span className="text-brand-600 mt-2 inline-block">
+                Giữ Trọn Tinh Chất.
+              </span>
             </motion.h1>
 
             <motion.p
@@ -91,25 +93,28 @@ export function AboutContent() {
               {/* Floating Badge (Mobile Optimized) */}
               <div className="absolute -right-4 bottom-8 lg:-left-12 lg:top-1/2 lg:-translate-y-1/2 lg:-rotate-90 bg-brand-950 text-white px-4 py-2 rounded-lg lg:bg-transparent lg:text-brand-300 lg:p-0 flex items-center gap-6">
                 <div className="hidden lg:block w-20 h-px bg-brand-200" />
-                <span className="text-[9px] font-black uppercase tracking-widest lg:tracking-[0.5em]">THIẾT LẬP TỪ MCMLXXV</span>
+                <span className="text-[9px] font-black uppercase tracking-widest lg:tracking-[0.5em]">THIẾT LẬP TỪ 2015</span>
               </div>
             </div>
 
             <div className="order-1 lg:order-2">
               <div className="space-y-6 md:space-y-8">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3 text-center md:text-left">
                   <History className="text-brand-700" size={20} />
-                  <span className="text-brand-800 font-black tracking-[0.2em] uppercase text-[9px]">Chương 01: Di Sản</span>
+                  <span className="text-brand-800 font-black tracking-[0.2em] uppercase text-[8px] sm:text-[9px]">
+                    Chương 01: Di Sản
+                  </span>
                 </div>
 
-                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 leading-tight font-display tracking-tighter italic">
+                <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-900 leading-tight font-display tracking-tighter italic text-center md:text-left">
                   Việt Nam Cường Thịnh <br /> Nền Móng Tin Cậy.
                 </h2>
 
-                <div className="space-y-4 md:space-y-6 text-slate-500 leading-relaxed text-sm md:text-lg font-medium">
+                <div className="space-y-4 md:space-y-6 text-slate-500 leading-relaxed text-sm md:text-lg font-medium text-center md:text-left">
                   <p>
                     Hơn một thập kỷ trước, chúng tôi bắt đầu với sứ mệnh giải quyết thách thức về thất thoát sau thu hoạch và suy giảm dinh dưỡng nông sản Việt.
                   </p>
+
                   <p className="hidden md:block">
                     Ngày nay, chúng tôi đã phát triển thành đơn vị sản xuất cấp doanh nghiệp, tích hợp các công nghệ sấy thăng hoa tinh vi nhất để phục vụ thị trường quốc tế.
                   </p>
@@ -137,14 +142,18 @@ export function AboutContent() {
         <div className="container-xl px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             <div className="flex-1 order-2 lg:order-1">
-              <div className="flex items-center gap-3 mb-6 lg:mb-8">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-6 lg:mb-8">
                 <Microscope className="text-brand-700" size={20} />
-                <span className="text-brand-800 font-black tracking-[0.2em] uppercase text-[9px]">Chương 02: Kỹ Thuật</span>
+                <span className="text-brand-800 font-black tracking-[0.2em] uppercase text-[8px] sm:text-[9px]">
+                  Chương 02: Kỹ Thuật
+                </span>
               </div>
-              <h2 className="text-2xl md:text-5xl font-bold text-slate-900 mb-6 lg:mb-8 font-display leading-tight italic">
+
+              <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-slate-900 mb-6 lg:mb-8 font-display leading-tight italic text-center md:text-left">
                 Sự Ổn Định Khoa Học <br /> Là Tài Sản Cốt Lõi.
               </h2>
-              <p className="text-sm md:text-lg text-slate-500 leading-relaxed font-medium mb-8 lg:mb-10 max-w-xl">
+
+              <p className="text-sm md:text-lg text-slate-500 leading-relaxed font-medium mb-8 lg:mb-10 max-w-xl text-center md:text-left mx-auto md:mx-0">
                 Cơ sở hạ tầng sấy thăng hoa của chúng tôi được thiết kế cho sự chính xác tuyệt đối, đảm bảo giữ lại 97% vitamin và màu sắc tự nhiên.
               </p>
 
@@ -231,7 +240,7 @@ export function AboutContent() {
                   DH
                 </div>
                 <p className="text-sm md:text-lg italic mb-6 text-brand-50">
-                  "DryViet được xây dựng trên sự hội tụ của kỷ luật công nghiệp và niềm đam mê nông sản Việt."
+                  "VNCT được xây dựng trên sự hội tụ của kỷ luật công nghiệp và niềm đam mê nông sản Việt."
                 </p>
                 <div className="space-y-1">
                   <p className="font-bold uppercase tracking-widest text-[10px] text-white">Phạm Đông Huy</p>
@@ -247,7 +256,9 @@ export function AboutContent() {
       <section className="py-16 md:py-24 bg-white text-center">
         <div className="container-xl px-4">
           <div className="max-w-2xl mx-auto px-4">
-            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6 font-display italic leading-tight">Sẵn Sàng Cho Chương Mới?</h2>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-6 font-display italic leading-tight">
+              Sẵn Sàng Cho Chương Mới?
+            </h2>
             <p className="text-sm md:text-xl text-slate-500 font-medium mb-10">
               Cùng chúng tôi định nghĩa lại sự xuất sắc của nông sản Việt trên bản đồ thế giới.
             </p>

@@ -65,7 +65,9 @@ export function Footer() {
       <div className="bg-slate-50/50 border-b border-slate-100 py-16">
         <div className="container-xl px-4 flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="max-w-xl">
-            <h3 className="text-2xl font-bold text-slate-950 font-display italic tracking-tight mb-2">Đăng ký để nhận tin tức mới nhất.</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-950 font-display italic tracking-tight mb-2">
+              Đăng ký để nhận tin tức mới nhất.
+            </h3>
             <p className="text-sm font-medium text-slate-500 italic">Nhận các báo cáo độc quyền về tối ưu hóa quy trình sấy và xu hướng nguồn cung thực phẩm sạch toàn cầu.</p>
           </div>
           <form onSubmit={handleSubmit} className="flex w-full lg:w-fit gap-3">
@@ -80,7 +82,7 @@ export function Footer() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="h-14 px-8 rounded-2xl bg-brand-950 text-white font-black text-[10px] uppercase tracking-widest hover:bg-brand-800 transition-all shadow-xl shadow-brand-950/10 flex items-center justify-center gap-2"
+              className="h-12 sm:h-14 px-6 sm:px-8 rounded-2xl bg-brand-950 text-white font-black text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-widest hover:bg-brand-800 transition-all shadow-xl shadow-brand-950/10 flex items-center justify-center gap-2"
             >
               {isSubmitting ? 'Đang gửi...' : 'Đăng Ký ngay'}
             </button>
@@ -105,7 +107,7 @@ export function Footer() {
             <p className="text-sm font-medium leading-relaxed text-slate-500 mb-8 max-w-sm">
               Kết nối di sản nông nghiệp trù phú của Việt Nam với các tiêu chuẩn sức khỏe toàn cầu, thông qua công nghệ sấy thăng hoa tiên tiến ngay tại Quận 12, TP. Hồ Chí Minh.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-6">
               <SocialIcon
                 href="https://www.facebook.com/page.KoTheChe"
                 src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/facebook/default.svg"
@@ -132,6 +134,15 @@ export function Footer() {
                 alt="Phone"
               />
             </div>
+            
+            <Link 
+              href="/careers" 
+              target="_blank"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all shadow-lg shadow-yellow-400/20 hover:-translate-y-1 active:scale-95 group/btn"
+            >
+              <UserCheck size={16} className="transition-transform group-hover/btn:scale-110" />
+              We are hiring
+            </Link>
           </div>
 
           {/* Quick Links (2/12) */}

@@ -10,10 +10,10 @@ export function BlogTeaser() {
   return (
     <section className="section-pad bg-white">
       <div className="container-xl">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 text-center md:text-left">
+          <div className="w-full md:w-auto">
             <span className="text-brand-600 font-bold tracking-wider uppercase text-sm">Kiến Thức Chuyên Ngành</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900">Tin Tức Mới Nhất</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900 leading-tight">Tin Tức Mới Nhất</h2>
           </div>
           <Button href="/blog" variant="ghost" className="hidden md:inline-flex">
             Xem Tất Cả Bài Viết <ArrowRight size={16} />

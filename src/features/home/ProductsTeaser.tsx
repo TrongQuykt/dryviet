@@ -11,8 +11,13 @@ export function ProductsTeaser() {
       <div className="container-xl">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <span className="text-brand-600 font-bold tracking-wider uppercase text-sm">Danh Mục Sản Phẩm</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900">Khám Phá KOTHECHE</h2>
+            <span className="text-brand-600 font-bold tracking-wider uppercase text-xs sm:text-sm">
+              Danh Mục Sản Phẩm
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900">
+              Khám Phá KOTHECHE
+            </h2>
             <p className="text-gray-600 text-lg">
               Snack trái cây sấy thăng hoa 100% tự nhiên. Sẵn sàng cho phân phối toàn cầu hoặc gia công nhãn riêng OEM.
             </p>

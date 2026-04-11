@@ -45,8 +45,13 @@ export function ServicesOverview() {
     <section className="section-pad">
       <div className="container-xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-600 font-bold tracking-wider uppercase text-sm">Giải Pháp Gia Công Toàn Diện</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900">Dịch Vụ OEM & Đóng Gói</h2>
+          <span className="text-brand-600 font-bold tracking-wider uppercase text-xs sm:text-sm">
+            Giải Pháp Gia Công Toàn Diện
+          </span>
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 mb-6 text-gray-900">
+            Dịch Vụ OEM & Đóng Gói
+          </h2>
           <p className="text-gray-600 text-lg">Chúng tôi cung cấp giải pháp trọn gói cho các thương hiệu muốn ra mắt sản phẩm sấy thăng hoa cao cấp mà không cần đầu tư nhà máy.</p>
         </div>
 
@@ -63,8 +68,10 @@ export function ServicesOverview() {
               <div className="w-16 h-16 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
                 {srv.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{srv.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-8">{srv.description}</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-tight text-center">
+                {srv.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-8 text-center">{srv.description}</p>
 
               <ul className="space-y-4 w-full">
                 {srv.features.map((feature, idx) => (

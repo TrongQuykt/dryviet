@@ -32,11 +32,11 @@ export function CertificationsSection() {
           <h2 className="text-2xl md:text-4xl font-bold mt-2 mb-4 text-gray-900 leading-tight">Chứng Nhận Quốc Tế</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-10 px-4">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-10 px-4 max-w-6xl mx-auto">
           {certs.map((cert, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center w-[calc(50%-1rem)] md:w-[calc(33.333%-2rem)] lg:flex-1 min-w-[140px] md:min-w-[180px]"
             >
               <div className="w-full aspect-square rounded-2xl md:rounded-[2rem] border border-brand-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-white">
                 <Image
