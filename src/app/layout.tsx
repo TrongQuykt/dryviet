@@ -22,7 +22,13 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+  verification: {
+    google: 'google-site-verification-placeholder',
+  },
   title: {
     default: 'Việt Nam Cường Thịnh – Sấy Thăng Hoa | KOTHECHE',
     template: '%s | KOTHECHE',
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    url: 'https://dryviet.com',
+    url: 'https://dryviet.vercel.app',
     siteName: 'Việt Nam Cường Thịnh – KOTHECHE',
     title: 'Việt Nam Cường Thịnh – Sấy Thăng Hoa | KOTHECHE',
     description: 'Sấy thăng hoa trái cây, rau củ, dược liệu tại TP.HCM. Đạt chuẩn FDA, ISO 22000, HACCP. Xuất khẩu Amazon Mỹ.',
@@ -60,10 +66,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://dryviet.com/#organization',
+        '@id': 'https://dryviet.vercel.app/#organization',
         'name': 'Việt Nam Cường Thịnh',
-        'url': 'https://dryviet.com',
-        'logo': 'https://dryviet.com/images/logo/logo.png',
+        'url': 'https://dryviet.vercel.app',
+        'logo': 'https://dryviet.vercel.app/images/logo/logo.png',
         'contactPoint': {
           '@type': 'ContactPoint',
           'telephone': '+84 868 021 818',
@@ -74,10 +80,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://dryviet.com/#website',
-        'url': 'https://dryviet.com',
+        '@id': 'https://dryviet.vercel.app/#website',
+        'url': 'https://dryviet.vercel.app',
         'name': 'DryViet - Sấy Thăng Hoa Việt Nam',
-        'publisher': { '@id': 'https://dryviet.com/#organization' }
+        'publisher': { '@id': 'https://dryviet.vercel.app/#organization' }
       }
     ]
   }

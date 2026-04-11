@@ -20,7 +20,7 @@ export interface AuditResult {
  */
 export async function runLocalAudit(): Promise<AuditResult> {
   const srcPath = path.join(process.cwd(), 'src')
-  const appDir = path.join(srcPath, 'app/(main)')
+  const appDir = path.join(srcPath, 'app')
   const issues: any[] = []
   
   // 1. Scan for Pages (Routes)

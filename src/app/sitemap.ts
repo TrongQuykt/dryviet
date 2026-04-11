@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 import { blogPosts } from '@/data/blog-posts'
 import { products } from '@/data/products'
 
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dryviet.com'
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dryviet.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static core routes
@@ -17,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/blog',           priority: 0.8,  changeFrequency: 'weekly'  as const },
     { url: '/contact',        priority: 0.85, changeFrequency: 'monthly' as const },
     { url: '/seo-audit',      priority: 0.5,  changeFrequency: 'monthly' as const },
+    { url: '/terms',           priority: 0.3,  changeFrequency: 'yearly'  as const },
+    { url: '/return-policy',   priority: 0.3,  changeFrequency: 'yearly'  as const },
+    { url: '/payment-policy',  priority: 0.3,  changeFrequency: 'yearly'  as const },
+    { url: '/shipping-policy', priority: 0.3,  changeFrequency: 'yearly'  as const },
   ]
 
   // Dynamic Product routes

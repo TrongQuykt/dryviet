@@ -8,7 +8,7 @@ export function CertificationsSection() {
     },
     {
       name: 'Tiêu chuẩn ISO 22000:2018',
-      image: '/images/certificates/ISO_22000-removebg-preview.png'
+      image: '/images/certificates/iso-22000-removebg-preview.png'
     },
     {
       name: 'Hệ thống HACCP',

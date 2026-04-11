@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: 'http', hostname: 'localhost' },
+      { protocol: 'https', hostname: 'dryviet.vercel.app' },
       { protocol: 'https', hostname: 'dryviet.com' },
       { protocol: 'https', hostname: 'www.amazon.com' },
     ],

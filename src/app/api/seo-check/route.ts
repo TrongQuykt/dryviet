@@ -6,8 +6,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const path = searchParams.get('path') || '/';
   
-  const isDev = process.env.NODE_ENV === 'development';
-  const baseUrl = isDev ? 'http://localhost:3000' : (process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com');
+  const host = request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') || 'http';
+  const baseUrl = host ? `${proto}://${host}` : (process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com');
   const targetUrl = `${baseUrl}${path}`;
 
   try {
