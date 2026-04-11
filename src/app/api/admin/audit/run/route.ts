@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+export const dynamic = 'force-dynamic'
 import { db } from '@/lib/db'
 import { runLocalAudit } from '@/lib/audit/engine'
 import { cookies } from 'next/headers'
