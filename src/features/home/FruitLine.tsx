@@ -18,9 +18,9 @@ export function FruitLine() {
       <motion.div
         animate={{ x: "-50%" }}
         transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-        className="flex gap-16 items-center min-w-full"
+        className="flex gap-16 items-center min-w-full will-change-transform"
       >
-        {[...Array(6)].map((_, groupIdx) => (
+        {[...Array(3)].map((_, groupIdx) => (
           <div key={groupIdx} className="flex gap-16 items-center">
             {traits.map((trait, i) => (
               <div key={i} className="flex items-center gap-3">

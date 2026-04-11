@@ -31,8 +31,8 @@ export function LazySection({ children, height = '300px', offset = '400px' }: La
         }
       },
       {
-        rootMargin: `0px 0px ${offset} 0px`, // Start loading before it reaches the viewport
-        threshold: 0.01
+        rootMargin: `0px 0px 200px 0px`, // Load sooner on mobile
+        threshold: 0.1
       }
     )
 

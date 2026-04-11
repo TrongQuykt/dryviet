@@ -78,7 +78,7 @@ export function BannerMarquee() {
                 alt={`Nền mờ cho banner ${index + 1}`}
                 fill
                 priority
-                className="object-cover blur-2xl scale-110 opacity-50"
+                className="object-cover blur-lg md:blur-2xl scale-110 opacity-30 md:opacity-50"
               />
 
               {/* Main image */}
