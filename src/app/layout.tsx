@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Navbar } from '@/components/common/Navbar'
 import { Footer } from '@/components/common/Footer'
 import { FloatingContact } from '@/components/common/FloatingContact'
@@ -92,6 +94,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <FloatingContact />
         </div>
+        <Analytics />
+        <SpeedInsights />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
