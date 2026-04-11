@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("DATABASE_URL_UNPOOLED")
+}
+
+model Contact {
+  id          Int      @id @default(autoincrement())
+  fullName    String
+  email       String
+  phone       String?
+  interest    String?
+  message     String   @db.Text
+  createdAt   DateTime @default(now())
+}
+
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  isActive  Boolean  @default(true)
+}
+model AdminAuth {
+  id        Int      @id @default(autoincrement())
+  email     String
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model AuditReport {
+  id              Int      @id @default(autoincrement())
+  overallScore    Int
+  technicalScore  Int
+  performanceScore Int
+  contentScore    Int
+  uxScore         Int
+  urlCount        Int
+  issues          Json     // Chi tiết các lỗi phát hiện được
+  createdAt       DateTime @default(now())
+}
