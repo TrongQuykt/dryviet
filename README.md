@@ -1,7 +1,13 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=VNCT" alt="Viet Nam Cuong Thinh Logo" width="120" height="120" />
+  <img 
+    src="https://github.com/user-attachments/assets/69494ee7-24e0-48a6-976d-8103f891d86f" 
+    alt="Viet Nam Cuong Thinh Logo" 
+    width="320" 
+    height="240" 
+  />
+</div>
 
-  # 🚀 DryViet / KOTHECHE Next.js Enterprise Ecosystem
+  # 🚀 Dryviet | KOTHECHE Next.js Enterprise Ecosystem
   *Advanced B2B Export & B2C Premium E-Commerce Architecture*
 
   [![Next.js](https://img.shields.io/badge/Next.js-16.2.2-black?logo=next.js&style=flat-square)](https://nextjs.org/)
