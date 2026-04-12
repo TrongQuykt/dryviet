@@ -23,7 +23,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KOTHECHE - Tinh Hoa Trái Cây Sấy Thăng Hoa Việt Nam',
     description: 'Khám phá dòng sản phẩm trái cây sấy thăng hoa 100% tự nhiên, giữ trọn hương vị và dinh dưỡng. Đạt chuẩn quốc tế cho thị trường Mỹ.',
-    images: [{ url: '/images/logo/KoTheChe - Logo-01.png', width: 1200, height: 630, alt: 'KOTHECHE Brand' }],
+    type: 'website',
+    url: 'https://dryviet.vercel.app/kotheche',
+    images: [{ url: 'https://dryviet.vercel.app/images/logo/KoTheChe - Logo-01.png', width: 1200, height: 630, alt: 'KOTHECHE Brand' }],
   },
   twitter: {
     card: 'summary_large_image',

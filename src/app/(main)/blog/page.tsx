@@ -4,15 +4,18 @@ import Image from 'next/image'
 import { Calendar, ArrowRight, Clock, BookOpen } from 'lucide-react'
 import { blogPosts } from '@/data/blog-posts'
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }): Promise<Metadata> {
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ page?: string }> }): Promise<Metadata> {
   const params = await searchParams
-  const page = params?.page
-
+  const page = params.page
+  const url = page && page !== '1' 
+    ? `https://dryviet.vercel.app/blog?page=${page}` 
+    : 'https://dryviet.vercel.app/blog'
+    
   return {
     title: 'Kiến Thức Ngành | Trung Tâm Dữ Liệu VNCT',
     description: 'Những góc nhìn chuyên sâu về công nghệ sấy thăng hoa, sản xuất OEM và xu hướng thị trường nông nghiệp toàn cầu.',
     alternates: {
-      canonical: page && page !== '1' ? `https://dryviet.vercel.app/blog?page=${page}` : 'https://dryviet.vercel.app/blog'
+      canonical: url,
     }
   }
 }

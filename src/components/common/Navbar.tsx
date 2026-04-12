@@ -20,7 +20,6 @@ const navLinks = [
     ]
   },
   { label: 'Thương Hiệu KOTHECHE', href: '/kotheche' },
-  { label: 'Chứng Nhận', href: '/certifications' },
   { label: 'Dịch Vụ OEM', href: '/services' },
   { label: 'Tin Tức', href: '/blog' },
 ]

@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Về Việt Nam Cường Thịnh - Câu Chuyện Nông Sản Việt',
     description: 'Tìm hiểu về nhà máy sấy thăng hoa hiện đại và sứ mệnh mang nông sản Việt ra thị trường quốc tế.',
-    images: ['/images/logo/logo.jpg'],
+    type: 'website',
+    url: 'https://dryviet.vercel.app/about',
+    images: ['https://dryviet.vercel.app/images/logo/logo.jpg'],
   },
 }
 

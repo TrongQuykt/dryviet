@@ -21,7 +21,6 @@ const footerLinks = {
     { label: 'Sấy thăng hoa', href: '/services' },
     { label: 'Sản Phẩm', href: '/products' },
     { label: 'KOTHECHE', href: '/kotheche' },
-    { label: 'Chứng Nhận Chất Lượng', href: '/certifications' },
     { label: 'Về Chúng Tôi', href: '/about' },
     { label: 'Tin Tức', href: '/blog' },
   ],

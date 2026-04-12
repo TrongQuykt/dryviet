@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find(p => p.slug === slug)
   if (!post) return { title: 'Không Tìm Thấy Bài Viết' }
 
-  const title = `${post.title} | Kiến Thức Sấy Thăng Hoa `
+  const title = post.title
   const description = post.excerpt
   const image = post.coverImage
 
