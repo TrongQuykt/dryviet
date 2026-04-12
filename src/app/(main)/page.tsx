@@ -6,8 +6,18 @@ import { BrandLine } from '@/features/home/BrandLine'
 import { LazySection } from '@/components/common/LazySection'
 
 export const metadata: Metadata = {
-  title: 'Việt Nam Cường Thịnh – Tiên phong Công nghệ Sấy Thăng Hoa | DryViet',
+  title: 'Việt Nam Cường Thịnh – Công nghệ Sấy Thăng Hoa | KOTHECHE',
   description: 'Nhà máy sấy thăng hoa xuất khẩu chuẩn quốc tế tại TP.HCM. Chuyên gia công OEM/ODM nông sản, trái cây nhiệt đới đạt chuẩn FDA, ISO 22000, HACCP.',
+  openGraph: {
+    title: 'Việt Nam Cường Thịnh – Nhà Máy Sấy Thăng Hoa Xuất Khẩu',
+    description: 'Chuyên gia công OEM/ODM trái cây sấy thăng hoa cao cấp. Đạt chuẩn FDA, ISO 22000, HACCP. Đối tác tin cậy cho xuất khẩu nông sản Việt.',
+    images: ['/images/banner/banner2.jpg'],
+  },
+  twitter: {
+    title: 'Việt Nam Cường Thịnh – Sấy Thăng Hoa Chuẩn Quốc Tế',
+    description: 'Nhà máy sấy thăng hoa hiện đại tại TP.HCM. Gia công xuất khẩu chuẩn FDA, ISO 22000.',
+    images: ['/images/banner/banner2.jpg'],
+  },
 }
 
 // Dynamic imports for below-the-fold sections
@@ -32,58 +42,58 @@ export default function HomePage() {
       <HeroSection />
       <CompanyLine />
       <BrandLine />
-      
-      <LazySection height="650px">
+
+      <LazySection minHeightClass="min-h-[400px] lg:min-h-[650px]">
         <BannerMarquee />
       </LazySection>
 
       <FruitLine />
 
-      <LazySection height="800px">
+      <LazySection minHeightClass="min-h-[600px] lg:min-h-[800px]">
         <AboutSection />
       </LazySection>
 
-      <LazySection height="450px">
+      <LazySection minHeightClass="min-h-[300px] lg:min-h-[450px]">
         <LeadershipSection />
       </LazySection>
 
-      <LazySection height="950px">
+      <LazySection minHeightClass="min-h-[1400px] lg:min-h-[950px]">
         <ServicesOverview />
       </LazySection>
 
-      <LazySection height="900px">
+      <LazySection minHeightClass="min-h-[1200px] lg:min-h-[900px]">
         <ProcessSection />
       </LazySection>
 
-      <LazySection height="1000px">
+      <LazySection minHeightClass="min-h-[1500px] lg:min-h-[1000px]">
         <FactorySection />
       </LazySection>
 
-      <LazySection height="800px">
+      <LazySection minHeightClass="min-h-[700px] lg:min-h-[800px]">
         <KothecheBrand />
       </LazySection>
 
-      <LazySection height="1100px">
+      <LazySection minHeightClass="min-h-[1600px] lg:min-h-[1100px]">
         <ProductsTeaser />
       </LazySection>
 
-      <LazySection height="450px">
+      <LazySection minHeightClass="min-h-[300px] lg:min-h-[450px]">
         <CertificationsSection />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection minHeightClass="min-h-[400px] lg:min-h-[500px]">
         <ContractsSection />
       </LazySection>
 
-      <LazySection height="700px">
+      <LazySection minHeightClass="min-h-[900px] lg:min-h-[700px]">
         <BlogTeaser />
       </LazySection>
 
-      <LazySection height="600px">
+      <LazySection minHeightClass="min-h-[500px] lg:min-h-[600px]">
         <TestimonialsSection />
       </LazySection>
 
-      <LazySection height="500px">
+      <LazySection minHeightClass="min-h-[400px] lg:min-h-[500px]">
         <CTASection />
       </LazySection>
     </>

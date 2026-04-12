@@ -17,7 +17,18 @@ import {
 
 export const metadata: Metadata = {
   title: 'Dịch vụ OEM - Gia công sấy thăng hoa chuyên nghiệp',
-  description: 'Dịch vụ gia công sấy thăng hoa (Freeze Dried) chuyên nghiệp tại TP. Hồ Chí Minh. Quy trình đạt chuẩn quốc tế, chứng nhận FDA, phục vụ xuất khẩu toàn cầu.',
+  description: 'Dịch vụ gia công sấy thăng hoa (Freeze Dried) chuyên nghiệp chuẩn quốc tế tại TP.HCM. Chứng nhận FDA, ISO 22000, HACCP.',
+  openGraph: {
+    title: 'Gia Công Sấy Thăng Hoa OEM/ODM Chuẩn Quốc Tế',
+    description: 'Nâng tầm thương hiệu với dịch vụ gia công sản xuất sấy thăng hoa chuyên nghiệp. Đạt tiêu chuẩn xuất khẩu Mỹ, Nhật, Hàn.',
+    images: ['/images/banner/banner5.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dịch Vụ Gia Công Sấy Thăng Hoa VNCT',
+    description: 'Nhà máy gia công sấy thăng hoa chuẩn FDA tại TP.HCM. Giải pháp OEM/ODM tối ưu cho doanh nghiệp.',
+    images: ['/images/banner/banner5.jpg'],
+  },
 }
 
 export default function ServicesPage() {
@@ -64,25 +75,34 @@ export default function ServicesPage() {
       {/* SaaS Hero Section - Optimized for Mobile */}
       <section className="relative pt-24 lg:pt-28 pb-12 lg:pb-30 overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/banner/banner.jpg')] bg-cover bg-center opacity-10 blur-sm lg:transform lg:scale-110" />
+          <Image
+            src="/images/banner/banner5.jpg"
+            alt="Dịch vụ sấy thăng hoa OEM"
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover object-center opacity-10 blur-sm lg:transform lg:scale-110"
+            sizes="100vw"
+            quality={85}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white" />
         </div>
 
         <div className="container-xl relative z-10 text-center px-4">
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest mb-6 md:mb-8">
+          <div className="animate-fade-up opacity-0 inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest mb-6 md:mb-8">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-600"></span>
             </span>
             Gia Công OEM Toàn Cầu
           </div>
-          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
+          <h1 className="animate-fade-up opacity-0 [animation-delay:100ms] text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
             Cơ Sở Hạ Tầng
             <span className="block mt-1 text-brand-600 font-italic text-xl sm:text-3xl md:text-5xl lg:text-7xl">
               Công Nghiệp Sấy Thăng Hoa
             </span>
           </h1>
-          <p className="max-w-xl mx-auto text-slate-500 text-sm md:text-xl leading-relaxed mb-8 md:mb-10">
+          <p className="animate-fade-up opacity-0 [animation-delay:200ms] max-w-xl mx-auto text-slate-500 text-sm md:text-xl leading-relaxed mb-8 md:mb-10">
             Giải pháp sản xuất có khả năng mở rộng cho các thương hiệu snack trái cây cao cấp toàn cầu và các nhà phân phối B2B.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

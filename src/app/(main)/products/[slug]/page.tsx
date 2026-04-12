@@ -30,9 +30,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = products.find(p => p.slug === slug)
   if (!product) return { title: 'Không Tìm Thấy Sản Phẩm' }
 
+  const title = `${product.name} - Trái Cây Sấy Thăng Hoa Cao Cấp | KOTHECHE`
+  const description = product.description.substring(0, 160)
+  const image = product.image
+
   return {
-    title: `${product.name} - Trái cây sấy thăng hoa cao cấp`,
-    description: product.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
   }
 }
 
@@ -47,19 +70,24 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}/products/${product.slug}/#product`,
     name: product.name,
     description: product.description,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com'}${product.image}`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}${product.image}`,
     brand: {
       '@type': 'Brand',
+      '@id': 'https://dryviet.vercel.app/#organization',
       name: 'KOTHECHE'
+    },
+    manufacturer: {
+      '@id': 'https://dryviet.vercel.app/#localbusiness'
     },
     offers: {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       price: '0.00',
       priceCurrency: 'USD',
-      url: product.amazonUrl || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com'}/products/${product.slug}`
+      url: product.amazonUrl || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}/products/${product.slug}`
     }
   }
 
@@ -168,7 +196,12 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
         </section>
 
-        <ProductRichDescription images={product.descriptionImages} productName={product.name} />
+        <ProductRichDescription 
+          images={product.descriptionImages} 
+          productName={product.name} 
+          benefits={product.benefits}
+          specifications={product.specifications}
+        />
 
         <CertificationsSection />
       </div>

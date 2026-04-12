@@ -18,8 +18,19 @@ import { products } from '@/data/products'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Thương hiệu Trái cây Sấy Thăng Hoa Cao Cấp',
+  title: 'Thương hiệu Trái cây Sấy Thăng Hoa Cao Cấp | KOTHECHE',
   description: 'KOTHECHE là thương hiệu bán lẻ cao cấp của Việt Nam Cường Thịnh. Trái cây nhiệt đới sấy thăng hoa 100% tự nhiên, chuẩn FDA, hiện đã có mặt trên Amazon Mỹ.',
+  openGraph: {
+    title: 'KOTHECHE - Tinh Hoa Trái Cây Sấy Thăng Hoa Việt Nam',
+    description: 'Khám phá dòng sản phẩm trái cây sấy thăng hoa 100% tự nhiên, giữ trọn hương vị và dinh dưỡng. Đạt chuẩn quốc tế cho thị trường Mỹ.',
+    images: [{ url: '/images/logo/KoTheChe - Logo-01.png', width: 1200, height: 630, alt: 'KOTHECHE Brand' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Thương Hiệu Sấy Thăng Hoa Cao Cấp KOTHECHE',
+    description: 'Trái cây sấy thăng hoa nguyên bản, không đường, không chất bảo quản. Đạt chuẩn FDA xuất khẩu Mỹ.',
+    images: ['/images/logo/KoTheChe - Logo-01.png'],
+  },
 }
 
 export default function KothechePage() {
@@ -49,22 +60,31 @@ export default function KothechePage() {
       {/* Chapter 0: Brand Manifesto (Hero) - Responsive Optimized */}
       <section className="relative pt-24 lg:pt-26 pb-12 lg:pb-24 overflow-hidden border-b border-slate-100 bg-white">
         <div className="absolute inset-0 z-0 overflow-hidden opacity-10 blur-xl scale-110 lg:translate-y-[-10%]">
-          <div className="absolute inset-0 bg-[url('/images/banner/banner.jpg')] bg-cover bg-center" />
+          <Image
+            src="/images/banner/banner.jpg"
+            alt="Thương hiệu KOTHECHE"
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={85}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white" />
         </div>
 
         <div className="container-xl relative z-10 px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-6 md:mb-8">
+              <div className="animate-fade-up opacity-0 inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-6 md:mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
                 Linh Hồn Của Trái Cây Nhiệt Đới
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-slate-950 leading-[1.1] tracking-tight mb-6 md:mb-8">
+              <h1 className="animate-fade-up opacity-0 [animation-delay:100ms] text-3xl md:text-5xl lg:text-5xl font-bold text-slate-950 leading-[1.1] tracking-tight mb-6 md:mb-8">
                 Giữ nguyên tinh chất, <br />
                 <span className="text-brand-600 mt-2 inline-block">Nâng tầm giá trị.</span>
               </h1>
-              <p className="text-sm md:text-xl text-slate-500 mb-8 lg:mb-10 max-w-lg mx-auto lg:mx-0 font-display leading-relaxed">
+              <p className="animate-fade-up opacity-0 [animation-delay:200ms] text-sm md:text-xl text-slate-500 mb-8 lg:mb-10 max-w-lg mx-auto lg:mx-0 font-display leading-relaxed">
                 KOTHECHE định nghĩa lại việc ăn vặt lành mạnh bằng cách kết hợp di sản nông nghiệp Việt Nam với công nghệ thực phẩm tiên tiến.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -223,9 +243,9 @@ export default function KothechePage() {
                 <div className="aspect-video rounded-[1.5rem] md:rounded-[3rem] overflow-hidden border border-white/10 relative shadow-2xl">
                   <Image src="/images/banner/banner2.jpg" alt="Cơ sở" fill className="object-cover" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 lg:-top-6 lg:-right-6 bg-brand-500 p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-xl">
+                <div className="absolute -bottom-4 -left-4 lg:bottom-auto lg:left-auto lg:-top-6 lg:-right-6 bg-brand-500 p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-xl z-20">
                   <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest mb-1">Scale</p>
-                  <p className="text-sm md:text-xl font-bold">1000+ Ton/Year</p>
+                  <p className="text-sm md:text-xl font-bold">1000+ Tấn/Năm</p>
                 </div>
               </div>
             </div>

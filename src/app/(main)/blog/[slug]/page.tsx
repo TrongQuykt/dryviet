@@ -20,9 +20,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find(p => p.slug === slug)
   if (!post) return { title: 'Không Tìm Thấy Bài Viết' }
 
+  const title = `${post.title} | Kiến Thức Sấy Thăng Hoa | KOTHECHE`
+  const description = post.excerpt
+  const image = post.coverImage
+
   return {
-    title: `${post.title} | Kiến thức Sấy Thăng Hoa`,
-    description: post.excerpt,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
   }
 }
 
@@ -40,15 +63,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}/blog/${post.slug}/#article`,
     headline: post.title,
     description: post.excerpt,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com'}${post.coverImage}`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}${post.coverImage}`,
     datePublished: post.date,
     author: [{
       '@type': 'Organization',
-      name: 'Vietnam Cuong Thinh',
-      url: process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.com'
-    }]
+      '@id': 'https://dryviet.vercel.app/#organization',
+      'name': 'Viet Nam Cuong Thinh'
+    }],
+    publisher: {
+      '@id': 'https://dryviet.vercel.app/#organization'
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'}/blog/${post.slug}`
+    }
   }
 
   return (

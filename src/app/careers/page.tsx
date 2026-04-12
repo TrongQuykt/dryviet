@@ -4,7 +4,7 @@ import { jobs } from '@/data/jobs'
 import { Briefcase, MapPin, Clock, ArrowRight, TrendingUp } from 'lucide-react'
 
 export const metadata = {
-  title: 'Cơ hội nghề nghiệp tại Việt Nam Cường Thịnh | Tuyển dụng 2026',
+  title: 'Cơ hội nghề nghiệp tại Việt Nam Cường Thịnh | Tuyển dụng',
   description: 'Gia nhập đội ngũ Việt Nam Cường Thịnh để cùng kết nối di sản nông nghiệp Việt Nam với thế giới qua công nghệ sấy thăng hoa tiên tiến.'
 }
 

@@ -1,27 +1,42 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { ContactForm } from '@/features/contact/ContactForm'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Liên hệ Hợp tác - Báo giá Gia công Sấy Thăng Hoa',
-  description: 'Liên hệ Việt Nam Cường Thịnh để nhận báo giá gia công sấy thăng hoa OEM chuyên nghiệp hoặc đăng ký phân phối thương hiệu trái cây cao cấp KOTHECHE toàn cầu.',
+  title: 'Liên hệ Hợp tác - Báo giá Gia công Sấy Thăng Hoa | KOTHECHE',
+  description: 'Liên hệ Việt Nam Cường Thịnh để nhận báo giá gia công sấy thăng hoa OEM hoặc hợp tác phân phối thương hiệu KOTHECHE.',
+  openGraph: {
+    title: 'Liên Hệ Việt Nam Cường Thịnh - Hợp Tác Gia Công & Phân Phối',
+    description: 'Chuyên gia tư vấn giải pháp sấy thăng hoa OEM/ODM. Liên hệ ngay để nhận báo giá và quy trình sản xuất.',
+    images: ['/images/logo/logo.jpg'],
+  },
 }
 
 export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Small Hero Section with Banner Background */}
-      <section className="relative pt-24 pb-12 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-24 pb-12 overflow-hidden border-slate-100">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('/images/banner/banner.jpg')] bg-cover bg-center opacity-10 blur-sm transform scale-110" />
+          <Image
+            src="/images/banner/banner.jpg"
+            alt="Liên Hệ Việt Nam Cường Thịnh"
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover object-center opacity-10 blur-sm transform scale-110"
+            sizes="100vw"
+            quality={85}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
         </div>
 
         <div className="container-xl relative z-10 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display tracking-tight text-brand-950">
+          <h1 className="animate-fade-up opacity-0 text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display tracking-tight text-brand-950">
             Liên Hệ Với Chúng Tôi
           </h1>
-          <p className="max-w-xxl mx-auto text-slate-500 text-base md:text-lg">
+          <p className="animate-fade-up opacity-0 [animation-delay:100ms] max-w-2xl mx-auto text-slate-500 text-base md:text-lg">
             Chúng tôi luôn sẵn sàng hỗ trợ các giải pháp sấy thăng hoa tối ưu cho bạn.
           </p>
         </div>

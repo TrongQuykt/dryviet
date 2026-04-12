@@ -1,48 +1,43 @@
 import { MetadataRoute } from 'next'
-
 import { blogPosts } from '@/data/blog-posts'
 import { products } from '@/data/products'
 
 const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dryviet.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static core routes
+  const now = new Date()
+
+  // Static routes
   const staticRoutes = [
-    { url: '',               priority: 1.0,  changeFrequency: 'weekly'  as const },
-    { url: '/about',          priority: 0.8,  changeFrequency: 'monthly' as const },
-    { url: '/services',       priority: 0.9,  changeFrequency: 'monthly' as const },
-    { url: '/products',       priority: 0.9,  changeFrequency: 'weekly'  as const },
-    { url: '/kotheche',       priority: 0.85, changeFrequency: 'monthly' as const },
-    { url: '/certifications', priority: 0.7,  changeFrequency: 'yearly'  as const },
-    { url: '/blog',           priority: 0.8,  changeFrequency: 'weekly'  as const },
-    { url: '/contact',        priority: 0.85, changeFrequency: 'monthly' as const },
-    { url: '/seo-audit',      priority: 0.5,  changeFrequency: 'monthly' as const },
-    { url: '/terms',           priority: 0.3,  changeFrequency: 'yearly'  as const },
-    { url: '/return-policy',   priority: 0.3,  changeFrequency: 'yearly'  as const },
-    { url: '/payment-policy',  priority: 0.3,  changeFrequency: 'yearly'  as const },
-    { url: '/shipping-policy', priority: 0.3,  changeFrequency: 'yearly'  as const },
+    { url: `${base}`, priority: 1.0, changeFrequency: 'weekly' as const, lastModified: now },
+    { url: `${base}/about`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now },
+    { url: `${base}/services`, priority: 0.9, changeFrequency: 'monthly' as const, lastModified: now },
+    { url: `${base}/products`, priority: 0.9, changeFrequency: 'weekly' as const, lastModified: now },
+    { url: `${base}/blog`, priority: 0.8, changeFrequency: 'weekly' as const, lastModified: now },
+    { url: `${base}/contact`, priority: 0.85, changeFrequency: 'monthly' as const, lastModified: now },
+    { url: `${base}/kotheche`, priority: 0.85, changeFrequency: 'monthly' as const, lastModified: now },
+    { url: `${base}/certifications`, priority: 0.7, changeFrequency: 'yearly' as const, lastModified: now },
+    { url: `${base}/terms`, priority: 0.3, changeFrequency: 'yearly' as const, lastModified: now },
+    { url: `${base}/return-policy`, priority: 0.3, changeFrequency: 'yearly' as const, lastModified: now },
+    { url: `${base}/payment-policy`, priority: 0.3, changeFrequency: 'yearly' as const, lastModified: now },
+    { url: `${base}/shipping-policy`, priority: 0.3, changeFrequency: 'yearly' as const, lastModified: now },
   ]
 
-  // Dynamic Product routes
-  const productRoutes = products.map(p => ({
-    url: `/products/${p.slug}`,
+  // Dynamic products
+  const productRoutes = products.map((p) => ({
+    url: `${base}/products/${p.slug}`,
     priority: 0.8,
-    changeFrequency: 'monthly' as const
+    changeFrequency: 'monthly' as const,
+    lastModified: now,
   }))
 
-  // Dynamic Blog routes
-  const blogRoutes = blogPosts.map(post => ({
-    url: `/blog/${post.slug}`,
+  // Dynamic posts
+  const blogRoutes = blogPosts.map((post) => ({
+    url: `${base}/blog/${post.slug}`,
     priority: 0.7,
-    changeFrequency: 'monthly' as const
+    changeFrequency: 'monthly' as const,
+    lastModified: now,
   }))
 
-  const allRoutes = [...staticRoutes, ...productRoutes, ...blogRoutes]
-
-  return allRoutes.map(r => ({
-    url: `${base}${r.url}`,
-    lastModified: new Date(),
-    changeFrequency: r.changeFrequency,
-    priority: r.priority,
-  }))
+  return [...staticRoutes, ...productRoutes, ...blogRoutes]
 }

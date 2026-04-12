@@ -12,7 +12,7 @@ export function CertificationsSection() {
     },
     {
       name: 'Hệ thống HACCP',
-      image: '/images/certificates/haccp-removebg-preview.png'
+      image: '/images/certificates/HACCP-removebg-preview.png'
     },
     {
       name: 'Thương hiệu KOTHECHE™',

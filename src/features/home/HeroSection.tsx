@@ -49,6 +49,7 @@ export function HeroSection() {
           alt="Nhà máy sấy thăng hoa DryViet"
           fill
           priority
+          fetchPriority="high"
           className="object-cover scale-110 gpu-accelerate"
           sizes="100vw"
           quality={90}
@@ -56,54 +57,37 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-800/60 to-brand-640/40 z-10" />
       </motion.div>
 
-      <motion.div
-        className="container-xl relative z-10 text-center text-white px-4"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Premium Badge */}
-
-
-        <motion.h1
-          variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 max-w-5xl mx-auto px-4 leading-[1.1] sm:leading-tight tracking-tight break-words text-center drop-shadow-2xl"
-        >
+      <div className="container-xl relative z-10 text-center text-white px-4">
+        <h1 className="animate-fade-up text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 max-w-5xl mx-auto px-4 leading-[1.1] sm:leading-tight tracking-tight break-words text-center drop-shadow-2xl opacity-0 [animation-delay:100ms]">
           Sấy Thăng Hoa
           <span className="block mt-2 bg-gradient-to-r from-amber-300 to-orange-400 bg-clip-text text-transparent italic">
             Cho Thị Trường Toàn Cầu.
           </span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-sm md:text-lg text-white mb-10 max-w-2xl mx-auto opacity-90 leading-relaxed"
-        >
+        <p className="animate-fade-up text-sm md:text-lg text-white mb-10 max-w-2xl mx-auto opacity-0 leading-relaxed [animation-delay:300ms]">
           Nhà máy sản xuất OEM hiện đại tại Việt Nam. Đạt tiêu chuẩn Quốc tế FDA, ISO 22000 & HACCP. Giữ trọn 97% giá trị dinh dưỡng tự nhiên từ nông sản Việt.
-        </motion.p>
+        </p>
 
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="animate-fade-up flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 [animation-delay:500ms]">
           <Button href="/contact" size="lg" className="w-full sm:w-auto bg-white text-brand-900 hover:bg-cream">
             Nhận Báo Giá OEM
           </Button>
           <Button href="/kotheche" variant="outline" size="lg" className="w-full sm:w-auto text-white border-white hover:bg-white hover:text-brand-900">
             Khám Phá KOTHECHE
           </Button>
-        </motion.div>
+        </div>
 
         {/* Global Impact Indicator */}
-        <motion.div
-          variants={itemVariants}
-          className="mt-16 flex items-center justify-center px-4"
-        >
+        <div className="animate-fade-up mt-16 flex items-center justify-center px-4 opacity-0 [animation-delay:700ms]">
           <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 text-[11px] sm:text-xs md:text-sm font-medium opacity-80 text-center">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
             <span>
               Hiện đang xuất khẩu sang thị trường Mỹ, EU & Nhật Bản
             </span>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   )
 }

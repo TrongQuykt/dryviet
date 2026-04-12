@@ -4,7 +4,8 @@ import { useState, useEffect, useRef, ReactNode } from 'react'
 
 interface LazySectionProps {
   children: ReactNode
-  height?: string
+  height?: string // Legacy fixed height
+  minHeightClass?: string // Recommended: Responsive Tailwind class e.g., 'min-h-[500px] lg:min-h-[800px]'
   offset?: string
 }
 
@@ -12,7 +13,7 @@ interface LazySectionProps {
  * LazySection component wraps parts of the page that should only be loaded/rendered
  * when they enter the viewport. This significantly improves Initial Page Load and TTI.
  */
-export function LazySection({ children, height = '300px', offset = '400px' }: LazySectionProps) {
+export function LazySection({ children, height, minHeightClass = '', offset = '400px' }: LazySectionProps) {
   const [hasEnteredView, setHasEnteredView] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -46,13 +47,12 @@ export function LazySection({ children, height = '300px', offset = '400px' }: La
   return (
     <div 
       ref={containerRef} 
-      style={{ 
-        minHeight: height, // Always keep min-height to prevent layout collapse during load
-      }}
+      className={minHeightClass}
+      style={height ? { minHeight: height } : {}}
     >
       {hasEnteredView ? children : (
         // Placeholder for the section while loading
-        <div className="w-full h-full bg-slate-50/20 backdrop-blur-sm animate-pulse rounded-lg" style={{ height }} />
+        <div className={`w-full shadow-sm bg-slate-50/20 backdrop-blur-sm animate-pulse rounded-lg ${minHeightClass}`} style={height ? { height } : {}} />
       )}
     </div>
   )

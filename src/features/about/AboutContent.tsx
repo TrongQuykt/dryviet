@@ -42,41 +42,42 @@ export function AboutContent() {
       {/* Chapter 0: The Global Manifesto (Hero) */}
       <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-40 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 opacity-10 blur-sm overflow-hidden lg:translate-y-[-10%]">
-          <div className="absolute inset-0 bg-[url('/images/banner/banner.jpg')] bg-cover bg-center" />
+          <Image
+            src="/images/banner/banner.jpg"
+            alt="Về Việt Nam Cường Thịnh"
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={85}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white" />
         </div>
 
         <div className="container-xl relative z-10 px-4">
           <div className="max-w-4xl text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-6 md:mb-8"
+            <div
+              className="animate-fade-up opacity-0 inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-6 md:mb-8"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
               Kiến Tạo Tương Lai Nông Nghiệp Việt
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mb-10 text-brand-950 leading-[1.1] font-display tracking-tight"
+            <h1
+              className="animate-fade-up opacity-0 [animation-delay:100ms] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mb-10 text-brand-950 leading-[1.1] font-display tracking-tight"
             >
               Công Nghệ Sấy Thăng Hoa <br />
               <span className="text-brand-600 mt-2 inline-block">
                 Giữ Trọn Tinh Chất.
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="max-w-xl mx-auto lg:mx-0 text-slate-500 text-sm md:text-xl font-normal leading-relaxed"
+            <p
+              className="animate-fade-up opacity-0 [animation-delay:200ms] max-w-xl mx-auto lg:mx-0 text-slate-500 text-sm md:text-xl font-normal leading-relaxed"
             >
               Việt Nam Cường Thịnh là cầu nối chiến lược kết nối di sản nông sản Việt Nam với các tiêu chuẩn sức khỏe khắt khe nhất thế giới.
-            </motion.p>
+            </p>
           </div>
         </div>
       </section>

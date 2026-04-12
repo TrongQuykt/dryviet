@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Danh Mục Sản Phẩm | Sấy Thăng Hoa Cao Cấp DryViet',
+  title: 'Danh Mục Sản Phẩm | Sấy Thăng Hoa Cao Cấp',
   description: 'Khám phá thế giới trái cây sấy thăng hoa chuân quốc tế từ Việt Nam. Giải pháp bán sỉ OEM và thương hiệu bán lẻ KOTHECHE chất lượng cao.',
 }
 
@@ -26,22 +26,31 @@ export default function ProductsPage() {
       {/* SaaS Style Hero Section - Optimized for Mobile */}
       <section className="relative pt-24 lg:pt-32 pb-12 lg:pb-20 overflow-hidden text-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/products/dragon-fruit.jpg')] bg-cover bg-center opacity-10 blur-sm transform scale-110" />
+          <Image
+            src="/images/products/dragon-fruit.jpg"
+            alt="Trái cây sấy thăng hoa xuất khẩu"
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover object-center opacity-10 blur-sm transform scale-110"
+            sizes="100vw"
+            quality={85}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white" />
         </div>
         <div className="container-xl relative z-10 px-4">
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] font-black uppercase tracking-widest mb-6 lg:mb-8">
+          <div className="animate-fade-up opacity-0 inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 rounded-full text-[9px] font-black uppercase tracking-widest mb-6 lg:mb-8">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-600"></span>
             </span>
             Danh Mục Xuất Khẩu
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
+          <h1 className="animate-fade-up opacity-0 [animation-delay:100ms] text-3xl md:text-5xl lg:text-7xl font-bold mb-4 lg:mb-8 font-display tracking-tight text-brand-950 leading-[1.1]">
             Bộ Sưu Tập
             <span className="block mt-1 text-brand-600 font-italic">Sấy Thăng Hoa</span>
           </h1>
-          <p className="max-w-xl mx-auto text-slate-500 text-sm md:text-lg leading-relaxed mb-6 lg:mb-10">
+          <p className="animate-fade-up opacity-0 [animation-delay:200ms] max-w-xl mx-auto text-slate-500 text-sm md:text-lg leading-relaxed mb-6 lg:mb-10">
             Từ trang trại đến kệ hàng. Khám phá các dòng snack trái cây được thiết kế cho sự ổn định dài hạn và bảo tồn hương vị đỉnh cao.
           </p>
         </div>
@@ -90,36 +99,36 @@ export default function ProductsPage() {
                       {p.description}
                     </p>
 
-                    {/* Technical Specs - Compact for Mobile 2-column */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 mb-4 lg:mb-10">
-                      <div className="flex items-center gap-1.5 px-2 md:px-3 py-1 bg-white rounded-full text-[7px] md:text-[9px] font-bold text-slate-700 shadow-sm border border-slate-100">
-                        <Droplets size={8} className="text-blue-500" /> <span className="truncate">Ẩm &lt; 5%</span>
+                    {/* Technical Specs - Sleek Minimalist List */}
+                    <div className="hidden md:flex flex-col gap-2.5 mb-8">
+                      <div className="flex items-center gap-3 text-xs font-medium text-slate-600">
+                        <Droplets size={14} className="text-blue-500" /> 
+                        <span>Độ ẩm tuyệt đối &lt; 5%</span>
                       </div>
-                      <div className="flex items-center gap-1.5 px-2 md:px-3 py-1 bg-white rounded-full text-[7px] md:text-[9px] font-bold text-slate-700 shadow-sm border border-slate-100">
-                        <Zap size={8} className="text-orange-500" /> <span className="truncate">Tự Nhiên</span>
+                      <div className="flex items-center gap-3 text-xs font-medium text-slate-600">
+                        <Zap size={14} className="text-orange-500" /> 
+                        <span>100% Nguyên bản tự nhiên</span>
                       </div>
-                      <div className="hidden md:flex items-center gap-1.5 px-3 py-1 bg-white rounded-full text-[9px] font-bold text-slate-700 shadow-sm border border-slate-100">
-                        <Calendar size={10} className="text-green-500" /> Hạn Dùng 24T
-                      </div>
-                      <div className="hidden md:flex items-center gap-1.5 px-3 py-1 bg-white rounded-full text-[9px] font-bold text-slate-700 shadow-sm border border-slate-100">
-                        <ShieldCheck size={10} className="text-brand-600" /> FDA Inspected
+                      <div className="flex items-center gap-3 text-xs font-medium text-slate-600">
+                        <ShieldCheck size={14} className="text-brand-600" /> 
+                        <span>Đạt chuẩn kiểm định FDA</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex flex-col gap-2">
-                    <Button 
-                      href={p.amazonUrl || `/products/${p.slug}`}
-                      size="sm" 
-                      className="w-full text-[8px] md:text-[10px] uppercase font-black rounded-lg md:rounded-2xl"
+                  <div className="flex items-center gap-2 lg:gap-3 mt-auto pt-2">
+                    <Link
+                      href={`/products/${p.slug}`}
+                      className="flex-1 flex items-center justify-center gap-2 h-12 bg-brand-900 hover:bg-brand-800 text-white rounded-xl text-[9px] md:text-[10px] uppercase font-black tracking-widest transition-colors shadow-lg shadow-brand-900/20"
                     >
-                      Chi Tiết
-                    </Button>
+                      Khám Phá <ArrowUpRight size={14} className="text-brand-300" />
+                    </Link>
                     <Link
                       href="/contact"
-                      className="hidden md:flex bg-white border border-brand-100 text-brand-900 px-6 py-3.5 rounded-2xl items-center justify-center gap-3 hover:bg-brand-50 transition-all text-[10px] font-bold uppercase tracking-widest"
+                      title="Báo Giá Gia Công OEM"
+                      className="hidden md:flex items-center justify-center w-12 h-12 bg-white border border-slate-200 text-slate-500 hover:text-brand-600 hover:border-brand-300 hover:shadow-md rounded-xl transition-all"
                     >
-                      Báo Giá OEM
+                      <Layers size={18} />
                     </Link>
                   </div>
 

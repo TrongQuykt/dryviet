@@ -6,18 +6,13 @@ export function CompanyLine() {
 
   return (
     <div className="bg-[#8B4513] text-white py-3 border-y border-white/5 overflow-hidden flex whitespace-nowrap">
-      <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "-50%" }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        className="flex gap-16 items-center min-w-full"
-      >
+      <div className="flex gap-16 items-center min-w-full animate-marquee">
         {[...Array(20)].map((_, i) => (
-          <span key={i} className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase">
+          <span key={i} className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase shrink-0">
             {companyName}
           </span>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }
