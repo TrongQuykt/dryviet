@@ -4,9 +4,17 @@ import Image from 'next/image'
 import { Calendar, ArrowRight, Clock, BookOpen } from 'lucide-react'
 import { blogPosts } from '@/data/blog-posts'
 
-export const metadata: Metadata = {
-  title: 'Kiến Thức Ngành | Trung Tâm Dữ Liệu VNCT',
-  description: 'Những góc nhìn chuyên sâu về công nghệ sấy thăng hoa, sản xuất OEM và xu hướng thị trường nông nghiệp toàn cầu.',
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }): Promise<Metadata> {
+  const params = await searchParams
+  const page = params?.page
+
+  return {
+    title: 'Kiến Thức Ngành | Trung Tâm Dữ Liệu VNCT',
+    description: 'Những góc nhìn chuyên sâu về công nghệ sấy thăng hoa, sản xuất OEM và xu hướng thị trường nông nghiệp toàn cầu.',
+    alternates: {
+      canonical: page && page !== '1' ? `https://dryviet.vercel.app/blog?page=${page}` : 'https://dryviet.vercel.app/blog'
+    }
+  }
 }
 
 // export default ...
