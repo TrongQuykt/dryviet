@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Điều Khoản Dịch Vụ | DryViet',
-  description: 'Điều khoản và điều kiện sử dụng dịch vụ tại DryViet.',
+  description: 'Văn bản đầy đủ về điều khoản và điều kiện dịch vụ pháp lý khi hợp tác OEM/mua sắm trực tuyến tại công ty TNHH Việt Nam Cường Thịnh - Thương hiệu KOTHECHE.',
 }
 
 export default function TermsPage() {

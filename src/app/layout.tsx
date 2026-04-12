@@ -23,9 +23,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://dryviet.vercel.app'),
-  alternates: {
-    canonical: '/',
-  },
+
   verification: {
     google: 'google-site-verification-placeholder',
   },

@@ -71,6 +71,7 @@ export default function ProductsPage() {
                     src={p.image}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />

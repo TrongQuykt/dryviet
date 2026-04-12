@@ -32,7 +32,7 @@ export function ProductGallery({ images, productName, badge, badgeSlug }: Produc
               : 'border-transparent opacity-60 hover:opacity-100 hover:border-brand-200'
               }`}
           >
-            <Image src={img} alt={`Thumbnail ${i}`} fill className="object-cover" />
+            <Image src={img} alt={`Thumbnail ${i}`} fill sizes="100px" className="object-cover" />
           </button>
         ))}
       </div>
@@ -47,6 +47,7 @@ export function ProductGallery({ images, productName, badge, badgeSlug }: Produc
             src={images[currentIndex]}
             alt={productName}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain transition-transform duration-700 group-hover:scale-105 p-6"
             priority
           />

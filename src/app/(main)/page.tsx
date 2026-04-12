@@ -9,9 +9,17 @@ export const metadata: Metadata = {
   title: 'Việt Nam Cường Thịnh – Công nghệ Sấy Thăng Hoa | KOTHECHE',
   description: 'Nhà máy sấy thăng hoa xuất khẩu chuẩn quốc tế tại TP.HCM. Chuyên gia công OEM/ODM nông sản, trái cây nhiệt đới đạt chuẩn FDA, ISO 22000, HACCP.',
   openGraph: {
-    title: 'Việt Nam Cường Thịnh – Nhà Máy Sấy Thăng Hoa Xuất Khẩu',
-    description: 'Chuyên gia công OEM/ODM trái cây sấy thăng hoa cao cấp. Đạt chuẩn FDA, ISO 22000, HACCP. Đối tác tin cậy cho xuất khẩu nông sản Việt.',
-    images: ['/images/banner/banner2.jpg'],
+    title: 'Việt Nam Cường Thịnh – Sấy Thăng Hoa Chuẩn Quốc Tế',
+    description: 'Chuyên gia công OEM/ODM thực phẩm sấy thăng hoa cao cấp tại TPHCM. Đạt chuẩn FDA, ISO 22000, HACCP. Đối tác tin cậy cho xuất khẩu thế giới.',
+    url: 'https://dryviet.vercel.app',
+    siteName: 'Việt Nam Cường Thịnh – KOTHECHE',
+    type: 'website',
+    images: [{
+      url: 'https://dryviet.vercel.app/images/banner/banner2.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Việt Nam Cường Thịnh Sấy Thăng Hoa',
+    }],
   },
   twitter: {
     title: 'Việt Nam Cường Thịnh – Sấy Thăng Hoa Chuẩn Quốc Tế',

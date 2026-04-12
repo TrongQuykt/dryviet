@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Đổi Trả | DryViet',
-  description: 'Chính sách đổi trả hàng hóa và hoàn tiền tại DryViet.',
+  description: 'Chính sách đổi trả hàng hóa và hoàn tiền tại Việt Nam Cường Thịnh (DryViet). Đảm bảo quyền lợi tối đa cho khách hàng mua sỉ, mua lẻ và B2B xuất khẩu.',
 }
 
 export default function ReturnPolicyPage() {

@@ -229,7 +229,7 @@ export function Footer() {
             <span className="text-brand-600/60 italic font-medium">Thiết kế cho Sự Hoàn hảo Toàn cầu</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/sitemap" className="hover:text-brand-700 transition-all flex items-center gap-2">
+            <Link href="/sitemap.xml" className="hover:text-brand-700 transition-all flex items-center gap-2">
               Sơ đồ Trang web Doanh nghiệp <ArrowUpRight size={10} />
             </Link>
             <span className="text-slate-200">|</span>

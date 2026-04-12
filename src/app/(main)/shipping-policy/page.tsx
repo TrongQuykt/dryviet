@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Giao Hàng | DryViet',
-  description: 'Quy trình và thời gian giao nhận hàng hóa tại DryViet.',
+  description: 'Thông tin chi tiết quy trình, phí vận chuyển và thời gian giao nhận hàng hóa nông sản sấy thăng hoa tại Việt Nam Cường Thịnh (áp dụng toàn cầu và nội địa).',
 }
 
 export default function ShippingPolicyPage() {

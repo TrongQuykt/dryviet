@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Thanh Toán | DryViet',
-  description: 'Các hình thức thanh toán được hỗ trợ tại DryViet.',
+  description: 'Danh sách các hình thức thanh toán B2B, B2C được hỗ trợ tại hệ thống xuất khẩu nông sản Việt Nam Cường Thịnh: Chuyển khoản, TT, LC và thanh toán COD.',
 }
 
 export default function PaymentPolicyPage() {
