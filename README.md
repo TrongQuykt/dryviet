@@ -2,12 +2,12 @@
   <img 
     src="https://github.com/user-attachments/assets/69494ee7-24e0-48a6-976d-8103f891d86f" 
     alt="Viet Nam Cuong Thinh Logo" 
-    width="320" 
+    width="420" 
     height="240" 
   />
 </div>
 
-  # 🚀 Dryviet | KOTHECHE Next.js Enterprise Ecosystem
+  # Dryviet | KOTHECHE Next.js Enterprise Ecosystem
   *Advanced B2B Export & B2C Premium E-Commerce Architecture*
 
   [![Next.js](https://img.shields.io/badge/Next.js-16.2.2-black?logo=next.js&style=flat-square)](https://nextjs.org/)
@@ -20,14 +20,14 @@
 
 ---
 
-## 📖 Executive Summary
+## Executive Summary
 The **DryViet/KOTHECHE ecosystem** is a top-tier enterprise web application designed to command the global B2B OEM Freeze Drying market and the B2C Premium US Amazon market. Built upon a Next.js 16 (App Router) foundation, this platform serves as both a high-converting lead generation hub for B2B export partnerships and an immersive product catalog for retail customers.
 
 This repository tracks the entire journey from ideation to the final hyper-optimized deployment, emphasizing **Performance (Core Web Vitals)**, **SEO/Semantic HTML**, and **Responsive, Component-Driven Design**.
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## Tech Stack & Dependencies
 *An enterprise stack built for uncompromised speed, security, and scalability.*
 
 - **Core Framework**: Next.js (Version 16.2.2) utilizing the modern **App Router (`/src/app`)**.
@@ -41,7 +41,7 @@ This repository tracks the entire journey from ideation to the final hyper-optim
 
 ---
 
-## 🗺️ Project Architecture & Sitemap
+## Project Architecture & Sitemap
 
 ### 1. Folder Structure (Feature-First Pattern)
 ```text
@@ -68,7 +68,7 @@ This repository tracks the entire journey from ideation to the final hyper-optim
 
 ---
 
-## 🎯 Global SEO & Metatags Strategy (The 'SaaS' Approach)
+## Global SEO & Metatags Strategy (The 'SaaS' Approach)
 
 The core business goal of this app was **Organic Traffic Dominance** using psychological keyword clustering (e.g., *sấy thăng hoa, OEM thực phẩm, freeze drying Vietnam*).
 
@@ -91,7 +91,7 @@ We deployed 21 hyper-optimized, long-form markdown articles. These aren't generi
 
 ---
 
-## ⚡ Core Web Vitals (CWV) & Performance Tuning
+## Core Web Vitals (CWV) & Performance Tuning
 
 To hit `95+` on Lighthouse and ensuring mobile conversion doesn't bleed data:
 1. **Next `next/image` Optimization**: All heavy headers are flagged with `priority={true}` and `fetchPriority="high"` which solves the **Largest Contentful Paint (LCP)** bottleneck. Image assets are locally sourced WebP variants or aggressively cached.
@@ -129,7 +129,7 @@ npm run start
 
 ---
 
-## 📝 Change Log & Task Tracking Summary
+## Change Log & Task Tracking Summary
 
 **[PHASE 1] Structural Pivot & Next.js Initialization**
 - Migrated out from an old conceptual base to `App Router`.
